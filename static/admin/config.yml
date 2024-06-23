@@ -2,7 +2,6 @@ backend:
     name: github
     repo: Masked-Kunsiquat/cstate2
     branch: master
-    base_url: https://api.netlify.com
     auth_endpoint: auth
     commit_messages:
         create: "Create {{collection}} “{{slug}}”"
