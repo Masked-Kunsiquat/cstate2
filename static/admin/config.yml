@@ -1,45 +1,30 @@
 backend:
-    name: github
-    repo: Masked-Kunsiquat/cstate2
-    branch: master
-    base_url: https://sveltia-cms-auth.blaine005.workers.dev/
-#    api_root: https://api.github.com
-    
-#    auth_endpoint: auth
-    commit_messages:
-        create: "Create {{collection}} “{{slug}}”"
-        update: "Update {{collection}} “{{slug}}”"
-        delete: "Delete {{collection}} “{{slug}}”"
-        uploadMedia: "Upload “{{path}}”"
-        deleteMedia: "Delete “{{path}}”"
+  name: github
+  repo: Masked-Kunsiquat/cstate2
+  branch: master
+  base_url: https://sveltia-cms-auth.blaine005.workers.dev/
+  commit_messages:
+    create: "Create {{collection}} “{{slug}}”"
+    update: "Update {{collection}} “{{slug}}”"
+    delete: "Delete {{collection}} “{{slug}}”"
+    uploadMedia: "Upload “{{path}}”"
+    deleteMedia: "Delete “{{path}}”"
 
 media_folder: /static/img
-public_folder: /static
+public_folder: /img
 
 collections:
-  - label: "Issues"
-    label_singular: "Issue"
-    name: issue
-    folder: content
-    media_folder: "/static/img/issues"
-    public_folder: "../../../content/issues" # relative path from markdown file location
-    slug: "{{fields.slug}}"
-    path: "{{year}}/{{month}}/{{slug}}"
+  - name: "status"
+    label: "Status"
+    folder: "content/issues"
     create: true
-    view_filters:
-        - label: Drafts
-          field: draft
-          pattern: true
+    slug: "{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{slug}}"
     fields:
-        - {label: "Template Key", name: templateKey, widget: "hidden", default: "blog-post"}
-        - {label: "Slug", name: slug, widget: "string",
-           pattern: ["^[a-z0-9]+(?:-[a-z0-9]+)*$",
-                     "A slug can have no spaces or special characters"]
-          }
-        - {label: "Cover Image", name: cover, widget: "image"}
-        - {label: "Title", name: title}
-        - {label: "Publish Date", name: date, widget: "datetime"}
-        - {label: "Description", name: description, widget: "text"}
-        - {label: "Draft", name: draft, widget: "boolean", default: false}
-        - {label: "Tags", name: tags, widget: "list" }
-        - {label: "Body", name: body, widget: "markdown"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Resolved", name: "resolved", widget: "boolean", default: false}
+      - {label: "Resolved Date", name: "resolvedDate", widget: "datetime"}
+      - {label: "Severity", name: "severity", widget: "select", options: ["down", "disrupted", "notice"]}
+      - {label: "Affected Systems", name: "affected", widget: "list"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "More Info", name: "body", widget: "markdown"}
