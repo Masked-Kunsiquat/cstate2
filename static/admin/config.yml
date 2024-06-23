@@ -9,8 +9,8 @@ backend:
         uploadMedia: "Upload “{{path}}”"
         deleteMedia: "Delete “{{path}}”"
 
-media_folder: /static/media/uploads
-public_folder: /media/uploads
+media_folder: /static/img
+public_folder: /static
 
 collections:
   - label: "Issues"
