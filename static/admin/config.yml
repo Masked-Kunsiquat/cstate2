@@ -2,7 +2,7 @@ backend:
     name: github
     repo: Masked-Kunsiquat/cstate2
     branch: master
-    auth_endpoint: auth
+#    auth_endpoint: auth
     commit_messages:
         create: "Create {{collection}} “{{slug}}”"
         update: "Update {{collection}} “{{slug}}”"
