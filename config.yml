@@ -97,7 +97,7 @@ defaultContentLanguage: en
 #
 # Broken example:
 # baseUrl: /
-baseURL: https://example.com
+baseURL: https://stat.brysmarthome.page
 
 # For features like Last modified, you
 # need to use a Git repository. If you
@@ -143,8 +143,8 @@ params:
   # For help, see the wiki:
   # https://github.com/cstate/cstate/wiki/Customization
   categories:
-    - name: North Coast
-      description: The main servers are located here.
+    - name: Media
+      description: These are the Media systems running.
       closed: true
     - name: Empty Category
     - name: Uncategorized
@@ -158,10 +158,10 @@ params:
   # For help, see the wiki:
   # https://github.com/cstate/cstate/wiki/Customization
   systems:
-    - name: Gateway
-      category: North Coast
-    - name: Backup Gateway
-      category: North Coast
+    - name: Jellyfin
+      category: Media
+    - name: Jellyseerr
+      category: Media
     - name: Website
       description: The web frontend for the application.
       category: Uncategorized
