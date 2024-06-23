@@ -15,16 +15,38 @@ public_folder: /img
 
 collections:
   - name: "status"
-    label: "Status"
-    folder: "content/issues"
+    label: "System Status"
+    folder: "content/status"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Date", name: "date", widget: "datetime"}
-      - {label: "Resolved", name: "resolved", widget: "boolean", default: false}
-      - {label: "Resolved Date", name: "resolvedDate", widget: "datetime"}
-      - {label: "Severity", name: "severity", widget: "select", options: ["down", "disrupted", "notice"]}
-      - {label: "Affected Systems", name: "affected", widget: "list"}
+      - {label: "Status", name: "status", widget: "select", options: ["Operational", "Degraded Performance", "Partial Outage", "Major Outage"]}
+      - {label: "Affected Services", name: "affected_services", widget: "list"}
       - {label: "Description", name: "description", widget: "text"}
-      - {label: "More Info", name: "body", widget: "markdown"}
+      - {label: "Resolution", name: "resolution", widget: "markdown"}
+
+  - name: "maintenance"
+    label: "Scheduled Maintenance"
+    folder: "content/maintenance"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Maintenance Title", name: "title", widget: "string"}
+      - {label: "Start Date", name: "start_date", widget: "datetime"}
+      - {label: "End Date", name: "end_date", widget: "datetime"}
+      - {label: "Affected Services", name: "affected_services", widget: "list"}
+      - {label: "Details", name: "details", widget: "markdown"}
+
+  - name: "issues"
+    label: "Incident Reports"
+    folder: "content/issues"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Issue Title", name: "title", widget: "string"}
+      - {label: "Date Reported", name: "date_reported", widget: "datetime"}
+      - {label: "Status", name: "status", widget: "select", options: ["Investigating", "Identified", "Monitoring", "Resolved"]}
+      - {label: "Affected Services", name: "affected_services", widget: "list"}
+      - {label: "Incident Details", name: "incident_details", widget: "markdown"}
