@@ -2,7 +2,6 @@ backend:
     name: github
     repo: Masked-Kunsiquat/cstate2
     branch: master
-    base_url: https://stat.brysmarthome.page
     commit_messages:
         create: "Create {{collection}} “{{slug}}”"
         update: "Update {{collection}} “{{slug}}”"
@@ -14,12 +13,12 @@ media_folder: /static/media/uploads
 public_folder: /media/uploads
 
 collections:
-  - label: "Posts"
-    label_singular: "Post"
-    name: posts
-    folder: posts
-    media_folder: "/static/media/blog"
-    public_folder: "../../../static/media/blog" # relative path from markdown file location
+  - label: "Issues"
+    label_singular: "Issue"
+    name: issue
+    folder: content
+    media_folder: "/static/img/issues"
+    public_folder: "../../../content/issues" # relative path from markdown file location
     slug: "{{fields.slug}}"
     path: "{{year}}/{{month}}/{{slug}}"
     create: true
