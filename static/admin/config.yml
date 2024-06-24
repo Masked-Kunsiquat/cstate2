@@ -43,10 +43,13 @@ collections:
     label: "Incident Reports"
     folder: "content/issues"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{slug}}"
     fields:
-      - {label: "Issue Title", name: "title", widget: "string"}
-      - {label: "Date Reported", name: "date_reported", widget: "datetime"}
-      - {label: "Status", name: "status", widget: "select", options: ["Investigating", "Identified", "Monitoring", "Resolved"]}
-      - {label: "Affected Services", name: "affected_services", widget: "list"}
-      - {label: "Incident Details", name: "incident_details", widget: "markdown"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Resolved", name: "resolved", widget: "boolean", default: false}
+      - {label: "Resolved When", name: "resolvedWhen", widget: "datetime"}
+      - {label: "Severity", name: "severity", widget: "select", options: ["down", "disrupted", "notice"]}
+      - {label: "Affected Systems", name: "affected", widget: "list"}
+      - {label: "Section", name: "section", widget: "hidden", default: "issue"}
+      - {label: "Description", name: "description", widget: "markdown"}
