@@ -34,6 +34,7 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Maintenance Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
       - {label: "Start Date", name: "start_date", widget: "datetime"}
       - {label: "End Date", name: "end_date", widget: "datetime"}
       - {label: "Affected Services", name: "affected_services", widget: "list"}
