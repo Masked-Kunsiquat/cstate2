@@ -40,6 +40,8 @@ collections:
       - {label: "Affected Services", name: "affected_services", widget: "list"}
       - {label: "Details", name: "details", widget: "markdown"}
       - {label: "Informational", name: "informational", widget: "boolean", default: false}
+      - {label: "Affected Systems", name: "affected", widget: "list"}
+      - {label: "Section", name: "section", widget: "hidden", default: "issue"}
 
   - name: "issues"
     label: "Incident Reports"
