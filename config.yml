@@ -146,7 +146,8 @@ params:
     - name: Media
       description: These are the Media systems running.
       closed: true
-    - name: Empty Category
+    - name: Backend 
+      closed: true
     - name: Uncategorized
       untitled: true
 
@@ -158,20 +159,20 @@ params:
   # For help, see the wiki:
   # https://github.com/cstate/cstate/wiki/Customization
   systems:
-    - name: Jellyfin
+    - name: jellyfin
       category: Media
-    - name: Jellyseerr
+    - name: jellyseerr
       category: Media
-    - name: Website
-      description: The web frontend for the application.
-      category: Uncategorized
-      link: https://example.com/
-    - name: API
-      description: The guts of the application.
-      category: Uncategorized
-    - name: Media Proxy
-      description: This is the service responsible for serving images, audio, and video. It is reliant on our CDN.
-      category: Uncategorized
+      description: "System to automate/streamline the requests of media."       
+    - name: wizarr
+      category: media
+      description: "System to automate/streamline invitations to the jellyfin server." 
+
+
+    - name: Proxmox Helper Scripts
+      description: "Amazing Proxmox scripts for automating LXC and VM creation."
+      category: Backend
+      link: " https://helper-scripts.com" 
 
   # What date format to use?
   #
