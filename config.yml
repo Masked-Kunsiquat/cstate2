@@ -167,7 +167,7 @@ params:
       category: Media
       description: "System to automate/streamline the requests of media."       
     - name: wizarr
-      category: media
+      category: Media 
       description: "System to automate/streamline invitations to the jellyfin server." 
 
 
