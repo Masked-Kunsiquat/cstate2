@@ -150,6 +150,8 @@ params:
       closed: true
     - name: Uncategorized
       untitled: true
+    - name: Automation
+      closed: true
 
   # These are your systems. Change them to
   # change the amount of components.
@@ -173,6 +175,9 @@ params:
       description: "Amazing Proxmox scripts for automating LXC and VM creation."
       category: Backend
       link: " https://helper-scripts.com" 
+
+   - name: Home Assistant
+     category: Automation
 
   # What date format to use?
   #
