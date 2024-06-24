@@ -176,8 +176,8 @@ params:
       category: Backend
       link: " https://helper-scripts.com" 
 
-   - name: Home Assistant
-     category: Automation
+    - name: Home Assistant
+      category: Automation
 
   # What date format to use?
   #
