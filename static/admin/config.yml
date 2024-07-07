@@ -2,7 +2,7 @@ backend:
   name: github
   repo: Masked-Kunsiquat/cstate2
   branch: master
-  base_url: https://sveltia-cms-auth.blaine005.workers.dev/
+  base_url: ${{ secrets.CSTATE_BASE_URL }}
   commit_messages:
     create: "Create {{collection}} “{{slug}}”"
     update: "Update {{collection}} “{{slug}}”"
